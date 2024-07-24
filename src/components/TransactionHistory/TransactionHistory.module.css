@@ -1,0 +1,29 @@
+/* src/components/TransactionHistory/TransactionHistory.css */
+.transaction-history {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-history th,
+.transaction-history td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.transaction-history th {
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+
+.transaction-history tr:nth-child(even) {
+  background-color: #f9f9f9; /* світло-сірий */
+}
+
+.transaction-history tr:nth-child(odd) {
+  background-color: white; /* білий */
+}
+
+.transaction-history tr:hover {
+  background-color: #ddd; /* сірий при наведенні */
+}
