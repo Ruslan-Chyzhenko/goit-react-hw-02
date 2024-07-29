@@ -1,0 +1,14 @@
+/* src/App.css */
+.notification {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #ffeeba;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #856404;
+}
+
+.notification h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}

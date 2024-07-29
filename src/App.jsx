@@ -1,38 +1,277 @@
-import Profile from "./components/Profile/Profile";
-import FriendList from "./components/FriendList/FriendList";
-import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
-import Section from "./components/Section/Section";
-import Container from "./components/Container/Container";
-import Heading from "./components/Heading/Heading";
+// // src/App.js
+// import React, { useState } from "react";
+// import Feedback from "./Feedback";
+// import Options from "./Options";
 
-import userData from "./data/userData.json";
-import friends from "./data/friends.json";
-import transactions from "./data/transactions.json";
+// const App = () => {
+//   const [feedback, setFeedback] = useState({
+//     good: 0,
+//     neutral: 0,
+//     bad: 0,
+//   });
+
+//   return (
+//     <div className="App">
+//       <h1>Sip Happens Café</h1>
+//       <p>
+//         Please leave your feedback about our service by selecting one of the
+//         options below.
+//       </p>
+//       <Options feedback={feedback} setFeedback={setFeedback} />
+//       <Feedback feedback={feedback} />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// // src/App.js
+// import React, { useState } from "react";
+// import Feedback from "./components/Feedback/Feedback";
+// import Options from "./components/Options/Options";
+// import "./App.css";
+
+// const App = () => {
+//   const [feedback, setFeedback] = useState({
+//     good: 0,
+//     neutral: 0,
+//     bad: 0,
+//   });
+
+//   const updateFeedback = (feedbackType) => {
+//     setFeedback((prevFeedback) => ({
+//       ...prevFeedback,
+//       [feedbackType]: prevFeedback[feedbackType] + 1,
+//     }));
+//   };
+
+//   return (
+//     <div className="App">
+//       <h1>Sip Happens Café</h1>
+//       <p>
+//         Please leave your feedback about our service by selecting one of the
+//         options below.
+//       </p>
+//       <Options updateFeedback={updateFeedback} />
+//       <Feedback feedback={feedback} />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// src/App.js
+// import React, { useState } from "react";
+// import Feedback from "./Feedback";
+// import Options from "./Options";
+// import Notification from "./Notification";
+// import "./App.css"; // Не забудьте імплементувати стилі
+
+// const App = () => {
+//   const [feedback, setFeedback] = useState({
+//     good: 0,
+//     neutral: 0,
+//     bad: 0,
+//   });
+
+//   const updateFeedback = (feedbackType) => {
+//     setFeedback((prevFeedback) => ({
+//       ...prevFeedback,
+//       [feedbackType]: prevFeedback[feedbackType] + 1,
+//     }));
+//   };
+
+//   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+
+//   return (
+//     <div className="App">
+//       <h1>Sip Happens Café</h1>
+//       <p>
+//         Please leave your feedback about our service by selecting one of the
+//         options below.
+//       </p>
+//       <Options updateFeedback={updateFeedback} />
+//       {totalFeedback > 0 ? <Feedback feedback={feedback} /> : <Notification />}
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// src/App.js
+// import React, { useState } from "react";
+// import Feedback from "./Feedback";
+// import Options from "./Options";
+// import Notification from "./Notification";
+// import "./App.css";
+
+// const App = () => {
+//   const [feedback, setFeedback] = useState({
+//     good: 0,
+//     neutral: 0,
+//     bad: 0,
+//   });
+
+//   const updateFeedback = (feedbackType) => {
+//     setFeedback((prevFeedback) => ({
+//       ...prevFeedback,
+//       [feedbackType]: prevFeedback[feedbackType] + 1,
+//     }));
+//   };
+
+//   const resetFeedback = () => {
+//     setFeedback({
+//       good: 0,
+//       neutral: 0,
+//       bad: 0,
+//     });
+//   };
+
+//   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+
+//   return (
+//     <div className="App">
+//       <h1>Sip Happens Café</h1>
+//       <p>
+//         Please leave your feedback about our service by selecting one of the
+//         options below.
+//       </p>
+//       <Options
+//         updateFeedback={updateFeedback}
+//         resetFeedback={resetFeedback}
+//         totalFeedback={totalFeedback}
+//       />
+//       {totalFeedback > 0 ? <Feedback feedback={feedback} /> : <Notification />}
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// src/App.js
+// import React, { useState } from "react";
+// import Feedback from "./Feedback";
+// import Options from "./Options";
+// import Notification from "./Notification";
+// import "./App.css"; // Не забудьте імплементувати стилі
+
+// const App = () => {
+//   const [feedback, setFeedback] = useState({
+//     good: 0,
+//     neutral: 0,
+//     bad: 0,
+//   });
+
+//   const updateFeedback = (feedbackType) => {
+//     setFeedback((prevFeedback) => ({
+//       ...prevFeedback,
+//       [feedbackType]: prevFeedback[feedbackType] + 1,
+//     }));
+//   };
+
+//   const resetFeedback = () => {
+//     setFeedback({
+//       good: 0,
+//       neutral: 0,
+//       bad: 0,
+//     });
+//   };
+
+//   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+//   const positiveFeedbackPercentage = totalFeedback
+//     ? Math.round((feedback.good / totalFeedback) * 100)
+//     : 0;
+
+//   return (
+//     <div className="App">
+//       <h1>Sip Happens Café</h1>
+//       <p>
+//         Please leave your feedback about our service by selecting one of the
+//         options below.
+//       </p>
+//       <Options
+//         updateFeedback={updateFeedback}
+//         resetFeedback={resetFeedback}
+//         totalFeedback={totalFeedback}
+//       />
+//       {totalFeedback > 0 ? (
+//         <Feedback
+//           feedback={feedback}
+//           totalFeedback={totalFeedback}
+//           positiveFeedbackPercentage={positiveFeedbackPercentage}
+//         />
+//       ) : (
+//         <Notification />
+//       )}
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// src/App.js
+import React, { useState, useEffect } from "react";
+import Feedback from "./components/Feedback/Feedback";
+import Options from "./components/Options/Options";
+import Notification from "./components/Notification/Notification";
+import css from "./App.module.css";
 
 const App = () => {
+  // Ініціалізуємо стан з локального сховища або з нульовими значеннями
+  const [feedback, setFeedback] = useState(() => {
+    const savedFeedback = localStorage.getItem("feedback");
+    return savedFeedback
+      ? JSON.parse(savedFeedback)
+      : { good: 0, neutral: 0, bad: 0 };
+  });
+
+  useEffect(() => {
+    // Оновлюємо локальне сховище, коли стан змінюється
+    localStorage.setItem("feedback", JSON.stringify(feedback));
+  }, [feedback]);
+
+  const updateFeedback = (feedbackType) => {
+    setFeedback((prevFeedback) => ({
+      ...prevFeedback,
+      [feedbackType]: prevFeedback[feedbackType] + 1,
+    }));
+  };
+
+  const resetFeedback = () => {
+    setFeedback({
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    });
+  };
+
+  const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  const positiveFeedbackPercentage = totalFeedback
+    ? Math.round((feedback.good / totalFeedback) * 100)
+    : 0;
+
   return (
-    <Section>
-      <Container>
-        <Heading title="Task 1 Profile" bottom />
-        <Profile
-          name={userData.username}
-          tag={userData.tag}
-          location={userData.location}
-          image={userData.avatar}
-          stats={userData.stats}
+    <div className="App">
+      <h1>Sip Happens Café</h1>
+      <p>
+        Please leave your feedback about our service by selecting one of the
+        options below.
+      </p>
+      <Options
+        updateFeedback={updateFeedback}
+        resetFeedback={resetFeedback}
+        totalFeedback={totalFeedback}
+      />
+      {totalFeedback > 0 ? (
+        <Feedback
+          feedback={feedback}
+          totalFeedback={totalFeedback}
+          positiveFeedbackPercentage={positiveFeedbackPercentage}
         />
-        <Heading title="Task 2 Freunds" bottom />
-        <>
-          <FriendList friends={friends} />
-        </>
-        <>
-          <Heading title="Task 3 Transactions" bottom />
-        </>
-        <>
-          <TransactionHistory items={transactions} />
-        </>
-      </Container>
-    </Section>
+      ) : (
+        <Notification />
+      )}
+    </div>
   );
 };
 
