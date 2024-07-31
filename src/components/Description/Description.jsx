@@ -1,4 +1,4 @@
-//Feedback.jsx
+//Description.jsx
 import css from "./Description.module.css";
 
 const Description = () => {
