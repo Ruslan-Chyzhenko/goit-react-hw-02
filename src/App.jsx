@@ -6,7 +6,7 @@ import Notification from "./components/Notification/Notification";
 import "./App.css";
 
 const App = () => {
-  // Ініціалізуємо стан з локального сховища або з нульовими значеннями
+  // Initializing the state from local storage or with null values
   const [feedback, setFeedback] = useState(() => {
     const savedFeedback = localStorage.getItem("feedback");
     return savedFeedback
@@ -15,7 +15,7 @@ const App = () => {
   });
 
   useEffect(() => {
-    // Оновлюємо локальне сховище, коли стан змінюється
+    // Updating the local storage when the state changes
     localStorage.setItem("feedback", JSON.stringify(feedback));
   }, [feedback]);
 
