@@ -1,45 +1,33 @@
-/* src/components/FriendList/FriendList.css */
-.friendsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* Feedback.module.css */
+.feedbackContainer {
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.friendListItem {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.feedbackTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
-.friendAvatar {
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
+.feedbackItem {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #555;
 }
 
-.friendName {
-  font-size: 18px;
+.feedbackTotal {
   font-weight: bold;
-  margin-right: auto;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #111;
 }
 
-.friendStatus {
-  font-size: 14px;
+.feedbackPositive {
   font-weight: bold;
-}
-
-.statusOnline {
-  color: green;
-}
-
-.statusOffline {
-  color: red;
+  color: #28a745;
 }

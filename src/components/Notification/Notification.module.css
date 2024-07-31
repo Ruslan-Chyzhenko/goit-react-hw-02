@@ -1,14 +1,21 @@
-/* src/App.css */
+/* Notification.modules.css */
 .notification {
-  margin-top: 2rem;
-  padding: 1rem;
-  background-color: #ffeeba;
+  background-color: #ffefc2;
+  border: 1px solid #ffdd77;
   border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #856404;
 }
 
 .notification h2 {
   font-size: 1.5rem;
+  color: #d9534f;
   margin-bottom: 0.5rem;
+}
+
+.notification p {
+  font-size: 1rem;
+  color: #555;
 }

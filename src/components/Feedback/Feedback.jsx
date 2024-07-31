@@ -1,29 +1,25 @@
-// src/Feedback.js
-
-// const Feedback = ({ feedback }) => {
-//   return (
-//     <div className="feedback">
-//       <h2>Feedback Statistics</h2>
-//       <p>Good: {feedback.good}</p>
-//       <p>Neutral: {feedback.neutral}</p>
-//       <p>Bad: {feedback.bad}</p>
-//     </div>
-//   );
-// };
-
-// export default Feedback;
-
-// src/Feedback.js
+//Feedback.jsx
+import css from "./Feedback.module.css";
 
 const Feedback = ({ feedback, totalFeedback, positiveFeedbackPercentage }) => {
   return (
-    <div className="feedback">
+    <div className={css.feedback}>
       <h2>Feedback Statistics</h2>
-      <p>Good: {feedback.good}</p>
-      <p>Neutral: {feedback.neutral}</p>
-      <p>Bad: {feedback.bad}</p>
-      <p>Total feedback: {totalFeedback}</p>
-      <p>Positive feedback: {positiveFeedbackPercentage}%</p>
+      <p>
+        Good: <span>{feedback.good}</span>
+      </p>
+      <p>
+        Neutral: <span>{feedback.neutral}</span>
+      </p>
+      <p>
+        Bad: <span>{feedback.bad}</span>
+      </p>
+      <p>
+        Total feedback: <span>{totalFeedback}</span>
+      </p>
+      <p>
+        Positive feedback: <span>{positiveFeedbackPercentage}%</span>
+      </p>
     </div>
   );
 };
